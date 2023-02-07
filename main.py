@@ -75,4 +75,4 @@ if button:
     csv = generated_ECG.to_csv(index=False).encode()
     # create a button to download the generated ECGs
     col1.markdown('###')
-    col1.download_button(label='Download ECGs', data=csv, file_name='ECGs.csv', mime='text/csv')
+    col1.download_button(label='Download ECGs as CSV', data=csv, file_name='ECGs.csv', mime='text/csv')
