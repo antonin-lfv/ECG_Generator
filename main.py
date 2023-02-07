@@ -32,7 +32,7 @@ st.markdown('###')
 # Selector and slider
 col1, _, col2, _ = st.columns([1, 0.2, 1, 0.2])
 # create a selector to select a disease
-disease = col1.selectbox('Select a disease', diseases, index=0, help='Select a disease to generate ECGs')
+disease = col1.selectbox('Select a type of ECG', diseases, index=0, help='Select a type of ECG to generate')
 # create a slider to select the number of ECGs to generate
 number_of_ecgs = col2.slider('Number of ECGs to generate', min_value=1, max_value=500, value=10, step=1)
 st.markdown('###')
