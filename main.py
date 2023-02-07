@@ -63,7 +63,7 @@ if button:
     fig = go.Figure()
     for i in range(number_of_ecgs):
         fig.add_trace(go.Scatter(y=generated_ECG[i]))
-    fig.update_layout(showlegend=False, dislpayModeBar=False)
+    fig.update_layout(showlegend=False)
     # transparent background
     fig.update_layout(plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
     col1.plotly_chart(fig, use_container_width=True)
