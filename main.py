@@ -66,7 +66,7 @@ if button:
     fig.update_layout(showlegend=False)
     # transparent background
     fig.update_layout(plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
-    col1.plotly_chart(fig)
+    col1.plotly_chart(fig, use_container_width=True)
 
     # transform the generated ECGs into a pandas dataframe
     generated_ECG = pd.DataFrame(generated_ECG).T
