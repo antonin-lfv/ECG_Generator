@@ -31,3 +31,18 @@ It is based on a variational autoencoder where the architecture is detailed [HER
   </a>
 </div>
 
+<br>
+
+In this application, you are able to generate ECGs of different types:
+- **NOR** :  Normal beat (NOR)
+- **LBBB** :  Left bundle branch block beat (LBBB)
+- **RBBB** :  Right bundle branch block beat (RBBB)
+- **NE** :  Nodal (junctional) escape beat (NE) 
+- **AP** :  Atrial premature beat (AB) 
+- **aAP** :  Aberrated atrial premature beat (aAP) 
+- **NP** :  Nodal (junctional) premature beat (NP) 
+- **PVC** :  Premature ventricular contraction (PVC) 
+- **VE** :  Ventricular escape beat (VE) 
+- **fVN** :  Fusion of ventricular and normal beat (VF) 
+
+And export them in a csv file. You can choose the number of ECGs you want to generate.
