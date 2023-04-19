@@ -1,7 +1,7 @@
 import streamlit as st
 import torch
 import plotly.graph_objects as go
-from const import Decoder
+from const import Decoder, categories_to_full_name
 import pandas as pd
 
 st.set_page_config(layout="wide",
@@ -24,7 +24,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-diseases = ['normal sinus rhythm (NSR)']
+categories = list(categories_to_full_name.values())
 
 st.markdown('<div class="title">ECG generator</div>', unsafe_allow_html=True)
 st.markdown('###')
@@ -32,7 +32,9 @@ st.markdown('###')
 # Selector and slider
 col1, _, col2, _ = st.columns([1, 0.2, 1, 0.2])
 # create a selector to select a disease
-disease = col1.selectbox('Select a type of ECG', diseases, index=0, help='Select a type of ECG to generate')
+category = col1.selectbox('Select a type of ECG', categories, index=0, help='Select a type of ECG to generate')
+# get the keys from the value in dictionary categories_to_full_name
+category = list(categories_to_full_name.keys())[list(categories_to_full_name.values()).index(category)]
 # create a slider to select the number of ECGs to generate
 number_of_ecgs = col2.slider('Number of ECGs to generate', min_value=1, max_value=500, value=10, step=1)
 st.markdown('###')
@@ -45,9 +47,9 @@ st.markdown('###')
 
 # if the button is clicked
 if button:
-    # load the pytorch model at models/disease.pt
+    # load the pytorch model at models/category_decoder_generation.pt
     model = Decoder()
-    model.load_state_dict(torch.load(f'models/NSR_decoder_generation.pt'))
+    model.load_state_dict(torch.load(f'models/{category}_decoder_generation.pt'))
     model.eval()
     # generate the ECGs
     generated_ECG = []
@@ -66,6 +68,7 @@ if button:
     fig.update_layout(showlegend=False)
     # transparent background
     fig.update_layout(plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
+    fig.update_layout(title_text=f'{number_of_ecgs} {categories_to_full_name[category]}')
     col1.plotly_chart(fig, use_container_width=True)
 
     # transform the generated ECGs into a pandas dataframe
