@@ -18,3 +18,16 @@
   </p>
 </div>
 
+<br>
+
+## About The Project
+
+This application is a streamlit app that allows you to generate ECGs. 
+It is based on a variational autoencoder where the architecture is detailed [HERE.](https://medium.com/@antoninlefevre45/auto-encodeur-variationnel-pour-la-génération-délectrocardiogrammes-45406e8b98ea)
+
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/ECG_generator_preview.png" alt="preview">
+  </a>
+</div>
+
