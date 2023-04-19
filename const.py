@@ -44,10 +44,14 @@ class Decoder(nn.Module):
         return z_final
 
 
-diseases = ['normal sinus rhythm (NSR)', 'Atrial premature beat (APB)', 'Atrial flutter (AFL)',
-            'Atrial fibrillation (AFIB)', "Supraventricular tachyarrhythmia (SVTA)",
-            "Wolff-Parkinson-White syndrome (WPW)", "Premature ventricular contraction (PVC)",
-            "Ventricular bigeminy (Bigeminy)", "Ventricular trigeminy (Trigeminy)", "Ventricular tachycardia (VT)",
-            "Idioventricular rhythm (IVR)", "Ventricular flutter (VFL)",
-            "Fusion of ventricular and normal beat (Fusion)", "Left bundle branch block beat (LBBBB)",
-            "Right bundle branch block beat (RBBBB)", "Second-degree heart block (SDHB)", "Pacemaker rhythm (PR)"]
+categories_to_full_name = {'NOR': 'Normal beat (NOR)',
+                           'LBBB': 'Left bundle branch block beat (LBBB)',
+                           'RBBB': 'Right bundle branch block beat (RBBB)',
+                           'NE': 'Nodal (junctional) escape beat (NE)',
+                           'AP': 'Atrial premature beat (AB)',
+                           'aAP': 'Aberrated atrial premature beat (aAP)',
+                           'NP': 'Nodal (junctional) premature beat (NP)',
+                           'PVC': 'Premature ventricular contraction (PVC)',
+                           'VE': 'Ventricular escape beat (VE)',
+                           'fVN': 'Fusion of ventricular and normal beat (VF)',
+                           }
