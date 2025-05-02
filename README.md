@@ -10,7 +10,7 @@
   <p align="center">
     An awesome streamlit app to generate ECGs!
     <br />
-    <a href="https://antonin-lfv-ecg-generator-main-yiaafi.streamlit.app/">Open application</a>
+    <a href="https://ecggenerator-gkzuo7vq2mtem8ygya7x63.streamlit.app">Open application</a>
     ·
     <a href="https://github.com/antonin-lfv/ECG_Generator/issues">Report Bug</a>
     ·
