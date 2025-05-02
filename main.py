@@ -71,11 +71,11 @@ if button:
     fig.update_layout(title_text=f'{number_of_ecgs} {categories_to_full_name[category]}')
     col1.plotly_chart(fig, use_container_width=True)
 
-    # transform the generated ECGs into a pandas dataframe
+    # transform the generated ECGs into a pandas dataframe (filename contains the name of the ECG type)
     generated_ECG = pd.DataFrame(generated_ECG).T
     generated_ECG.columns = [f'ECG_{i}' for i in range(1, number_of_ecgs + 1)]
     # download the generated ECGs as a csv file by transforming the dataframe into bytes
     csv = generated_ECG.to_csv(index=False).encode()
     # create a button to download the generated ECGs
     col1.markdown('###')
-    col1.download_button(label='Download ECGs as CSV', data=csv, file_name='ECGs.csv', mime='text/csv')
+    col1.download_button(label='Download ECGs as CSV', data=csv, file_name=f'ECGs_{category}.csv', mime='text/csv')

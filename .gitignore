@@ -1,2 +1,11 @@
-__pycache__/
-.idea/
+test/
+# all pycache files and folder in all subfolders
+**/__pycache__/
+# all .idea files and folders in all subfolders
+**/.idea/
+# all .DS_Store files in all subfolders
+**/.DS_Store
+# all .vscode files and folders in all subfolders
+**/.vscode/
+# all .env files in all subfolders
+**/.env
