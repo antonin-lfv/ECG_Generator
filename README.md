@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a>
     <img src="images/logo.png" alt="Logo" width="150" height="82">
   </a>
 
@@ -23,10 +23,10 @@
 ## About The Project
 
 This application is a streamlit app that allows you to generate ECGs. 
-It is based on a variational autoencoder where the architecture is detailed [HERE.](https://medium.com/@antoninlefevre45/auto-encodeur-variationnel-pour-la-génération-délectrocardiogrammes-45406e8b98ea)
+It is based on a variational autoencoder with convolution where the architecture and implementation is detailed [HERE.](https://medium.com/@antoninlefevre45/auto-encodeur-variationnel-pour-la-génération-délectrocardiogrammes-45406e8b98ea)
 
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a>
     <img src="images/ECG_generator_preview.png" alt="preview">
   </a>
 </div>
@@ -46,3 +46,19 @@ In this application, you are able to generate ECGs of different types:
 - **fVN** :  Fusion of ventricular and normal beat (VF) 
 
 And export them in a csv file. You can choose the number of ECGs you want to generate.
+
+## Preview of the architecture of the VAE convolutional model
+
+The encoder:
+<div align="center">
+  <a>
+    <img src="images/EncoderOnly.png" alt="preview">
+  </a>
+</div>
+
+The decoder:
+<div align="center">
+  <a>
+    <img src="images/DecoderOnly.png" alt="preview">
+  </a>
+</div>
