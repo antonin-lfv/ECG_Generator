@@ -47,6 +47,21 @@ In this application, you are able to generate ECGs of different types:
 
 And export them in a csv file. You can choose the number of ECGs you want to generate.
 
+## How to run the application locally
+
+Create the environment with `uv` (make sure you have `uv` installed):
+
+```bash
+uv sync
+```
+
+Then run the streamlit application:
+
+```bash
+uv run streamlit run main.py
+```
+
+
 ## Preview of the architecture of the VAE convolutional model
 
 The encoder:

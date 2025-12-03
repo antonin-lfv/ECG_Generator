@@ -4,6 +4,8 @@ import plotly.graph_objects as go
 from const import Decoder, categories_to_full_name
 import pandas as pd
 
+torch.classes.__path__ = []
+
 st.set_page_config(layout="wide",
                    page_title="ECG generator",
                    menu_items={'About': "ECG generator - made by Antonin"},
